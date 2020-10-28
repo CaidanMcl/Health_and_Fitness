@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "892303993439",
+    "firebase_url": "https://helfhealthandfitness.firebaseio.com",
+    "project_id": "helfhealthandfitness",
+    "storage_bucket": "helfhealthandfitness.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892303993439:android:71e4f4c5b5005679a889ea",
+        "android_client_info": {
+          "package_name": "com.helfhealthandfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892303993439-5fno7drnqd4b3vn9fn7hb33alrre7gei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1g-_2l8jtTkAvfUT3s7fIVdY7CjXUmBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892303993439-5fno7drnqd4b3vn9fn7hb33alrre7gei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
