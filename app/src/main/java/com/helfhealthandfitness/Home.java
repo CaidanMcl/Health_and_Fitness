@@ -15,6 +15,16 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Variable for charts
+        findViewById(R.id.buttonBarChart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), BarChartActivity.class));
+
+            }
+        });
+
+          //Variables
         Log = findViewById(R.id.btnLog);
         Goals = findViewById(R.id.btnGoals);
         EditP = findViewById(R.id.btnEditP);

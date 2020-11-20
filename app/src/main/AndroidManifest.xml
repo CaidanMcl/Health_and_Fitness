@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.helfhealthandfitness">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Goals"></activity>
+        <activity android:name=".BarChartActivity"></activity>
+        <activity android:name=".Goals" />
         <activity android:name=".UserProfileSettings" />
         <activity android:name=".UserProfile" />
         <activity android:name=".RegisterUser" />
@@ -21,16 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:authorities="com.helfhealthandfitness.fileprovider"
-            android:name="android.app.slice.SliceProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
 
-            <meta-data android:name="andriod.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
-
-        </provider>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

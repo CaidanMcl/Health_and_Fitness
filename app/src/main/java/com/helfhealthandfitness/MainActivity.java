@@ -25,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class  MainActivity extends AppCompatActivity {
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-   // DatabaseReference myRef = database.getReference("Login");
+    DatabaseReference myRef = database.getReference("Login");
 
     private FirebaseAuth mAuth;
 
@@ -83,6 +83,12 @@ public class  MainActivity extends AppCompatActivity {
 
                             startActivity(new Intent(MainActivity.this, Home.class));
                         }
+                      /*else
+                          {
+                              Toast.makeText(MainActivity.this, "User needs to register " , Toast.LENGTH_SHORT).show();
+                              startActivity(new Intent(MainActivity.this, RegisterUser.class));
+
+                        }*/
 
 
                     }
