@@ -9,6 +9,12 @@ public class GoalsWorkerClass {
     String weightGoal;
     String caloricGoal;
 
+    public GoalsWorkerClass()
+    {
+        //empty constructor
+    }
+
+
     public String getweightGoal() {
         return weightGoal;
     }
@@ -24,5 +30,12 @@ public class GoalsWorkerClass {
     public void setcaloricGoal(String gCalories) {
         caloricGoal = gCalories;
     }
+
+    public String ToString()
+    {
+        return "Weight goal " + weightGoal + "/n" +"Calories intake goal" + caloricGoal;
+    }
+
+
 
 }

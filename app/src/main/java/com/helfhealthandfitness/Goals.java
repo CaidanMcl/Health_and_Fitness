@@ -22,13 +22,18 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class  Goals extends AppCompatActivity {
     FirebaseDatabase database;
@@ -36,15 +41,19 @@ public class  Goals extends AppCompatActivity {
 //Initialize Variables
      ImageView imageView;
      Button btnTakePic;
-
-    private String Photo;
+     Button btnBarGraph;
+     private String Photo;
 
     String weightG;
     String CaloriesG;
 
+
+
     EditText Weight, Calories;
     Button btnSave;
     GoalsWorkerClass goalsWorkerClass;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +63,7 @@ public class  Goals extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
 
 
-
+        btnBarGraph= (Button) findViewById(R.id.btn_barGraph);
         //Variables for photo
         imageView = findViewById(R.id.IMG_pic);
         btnTakePic = findViewById(R.id.btnTakePic);
@@ -66,7 +75,13 @@ public class  Goals extends AppCompatActivity {
 
         btnSave = (Button) findViewById(R.id.btnSave);
 
-
+        btnBarGraph.setOnClickListener(new View.OnClickListener(){
+    @Override
+    public void onClick(View view) {
+       Intent bar = new Intent(Goals.this,BarChartActivity.class);
+      startActivity(bar);
+    }
+});
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +89,7 @@ public class  Goals extends AppCompatActivity {
                 CaloriesG = Calories.getText().toString().trim();
 
                 goalsWorkerClass = new GoalsWorkerClass(weightG, CaloriesG);
+
                 myRef.push().setValue(goalsWorkerClass)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -85,8 +101,10 @@ public class  Goals extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Goals.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+
                     }
                 });
+
 
 
             }

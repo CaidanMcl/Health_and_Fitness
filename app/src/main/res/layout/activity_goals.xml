@@ -50,6 +50,7 @@
 
     </LinearLayout>
 
+
     <Button
         android:id="@+id/btnTakePic"
         android:layout_width="126dp"
@@ -57,11 +58,10 @@
         android:text="Capture Food"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
-
+        app:layout_constraintVertical_bias="0.535" />
 
     <ImageView
         android:id="@+id/IMG_pic"
@@ -85,5 +85,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/goals" />
+
+    <Button
+        android:id="@+id/btn_barGraph"
+        android:layout_width="150dp"
+        android:layout_height="91dp"
+        android:text="View your progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTakePic"
+        app:layout_constraintVertical_bias="0.557" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

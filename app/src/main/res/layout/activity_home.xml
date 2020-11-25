@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:orientation="vertical"
-    android:gravity="center"
-    android:padding="10dp"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/helfwa"
     tools:context=".Home">
 
-    <Button
-        android:id="@+id/buttonBarChart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bar_chart"/>
-    <Button
-        android:id="@+id/buttonPieChart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pie_chart"/>
-    <Button
-        android:id="@+id/buttonRadarChart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/radar_chart"/>
 
     <Button
         android:id="@+id/btnGoals"
@@ -35,7 +18,9 @@
         app:layout_constraintVertical_bias="0.724"
         android:layout_width="122dp"
         android:layout_height="60dp"
-        android:text="HELF Goals" />
+        android:text="HELF Goals"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="497dp" />
 
     <Button
         android:id="@+id/btnEditP"
@@ -47,10 +32,19 @@
         app:layout_constraintVertical_bias="0.722"
         android:layout_width="126dp"
         android:layout_height="60dp"
-        android:text="Edit Profile" />
+        android:text="Edit Profile"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="599dp" />
+
+
 
     <TextView
         android:id="@+id/tv_Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
         android:layout_width="225dp"
         android:layout_height="76dp"
         android:fontFamily="sans-serif-medium"
@@ -61,11 +55,9 @@
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054" />
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="43dp" />
+
 
     <Button
         android:id="@+id/btnLog"
@@ -77,6 +69,7 @@
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
+        app:layout_constraintVertical_bias="0.724"
+        tools:layout_editor_absoluteY="489dp" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
